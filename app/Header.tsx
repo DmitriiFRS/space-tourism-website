@@ -1,11 +1,13 @@
+'use client'
 import styles from './styles/Header.module.scss';
 import Logo from './icons/logo';
-import homeCover from './imges/background-home-desktop.jpg';
-
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 function Header() {
+   const pathname = usePathname();
    const nav = [{
-      title: 'home', num: '00', isActive: true}, {title: 'destination', num: '01', isActive: false},
-      {title: 'crew', num: '02', isActive: false}, {title: 'technology', num: '03', isActive: false}
+      title: 'Home', num: '00', href: '/'}, {title: 'Destination', num: '01', href: '/Destination'},
+      {title: 'Crew', num: '02', href: '/Crew'}, {title: 'Technology', num: '03', href: '/Technology'}
    ]
    return (
    <header className={styles.header}>
@@ -19,9 +21,11 @@ function Header() {
             <ul className={styles.header__list}>
                {nav.map((el, index) => {
                   return(
-                  <li className={`${styles.header__item} ${el.isActive ? styles.header__itemActive : ''}`} key={index}>
-                     <span className={styles.header__num}>{el.num}</span>
-                     <span className={styles.header__title}>{el.title}</span>
+                  <li className={`${styles.header__item} ${pathname === el.href ? styles.header__itemActive : ''}`} key={index}>
+                     <Link style={{color: 'inherit', height: '96px', display: 'flex', alignItems: 'center'}} href={el.href}>
+                        <span className={styles.header__num}>{el.num}</span>
+                        <span className={styles.header__title}>{el.title}</span>
+                     </Link>
                   </li>)
                })}
             </ul>
@@ -31,3 +35,4 @@ function Header() {
    )
 }
 export default Header;
+//<Link href="/about"></Link>
