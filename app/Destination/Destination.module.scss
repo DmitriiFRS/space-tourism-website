@@ -49,14 +49,17 @@
       text-transform: uppercase;
       cursor: pointer;
       &:hover {
-         border-bottom: 3px solid #fff;
+         border-bottom: 3px solid rgba(255, 255, 255, 0.5);
       }
+   }
+   &__active {
+      border-bottom: 3px solid #fff;
    }
 }
 .moon {
    margin: 75px 0 0 0;
    display: grid;
-   grid-template-columns: 1fr 1fr;  
+   grid-template-columns: 1fr 1fr;   
    &__imgBody {
       position: relative;
       height: 447px;
