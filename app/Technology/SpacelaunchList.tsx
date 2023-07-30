@@ -45,7 +45,7 @@ function SpaceLaunchList() {
          <ul className={styles.terminology__btnList}>
             {btns.map((el, index) => {
                return (
-                  <li className={styles.terminology__item}><button onClick={() => changeSpaceLaunch(index)}
+                  <li key={index} className={styles.terminology__item}><button onClick={() => changeSpaceLaunch(index)}
                   className={`${styles.terminology__btn} ${index === currentspaceLaunch.id ? styles.terminology__active : ''}`}>{el}</button></li>
                )
             })}
