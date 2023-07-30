@@ -54,7 +54,7 @@ const planetsNav: Array<planetsType> = [{
    isActive: false
 }
 ]
-function ClientNav() {
+function ClientPlanetsNav() {
    const [planetRender, setPlanetRender] = useState<planetsType>(planetsNav[0]);
    const [isRender, setIsRender] = useState<boolean>(false);
    const [transition, setTransition] = useState({translateX: '0%', opacity: 1, transition: '1s'})
@@ -89,4 +89,4 @@ function ClientNav() {
    </>
    )
 }
-export default ClientNav;
+export default ClientPlanetsNav;

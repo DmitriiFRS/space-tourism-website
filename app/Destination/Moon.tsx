@@ -1,7 +1,7 @@
 "use client"
 import styles from './Destination.module.scss';
 import Image from 'next/image';
-import { planetsType, transitionType } from './ClientNav';
+import { planetsType, transitionType } from './ClientPlanetsNav';
 
 function Moon({planetRender, transition}: {planetRender: planetsType, transition: transitionType}) {
    return (
@@ -28,5 +28,3 @@ function Moon({planetRender, transition}: {planetRender: planetsType, transition
    )
 }
 export default Moon;
-
-// Перерисовывать с помощью useState обновлять весь объект с данными

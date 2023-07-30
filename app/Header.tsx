@@ -1,11 +1,12 @@
-'use client'
 import styles from './styles/Header.module.scss';
 import Logo from './icons/logo';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import HeaderNav from './HeaderNav';
+import BurgerMenu from './BurgerMenu';
+export type navType = {
+   [key: string]: string
+}
 function Header() {
-   const pathname = usePathname();
-   const nav = [{
+   const nav: Array<navType> = [{
       title: 'Home', num: '00', href: '/'}, {title: 'Destination', num: '01', href: '/Destination'},
       {title: 'Crew', num: '02', href: '/Crew'}, {title: 'Technology', num: '03', href: '/Technology'}
    ]
@@ -18,17 +19,8 @@ function Header() {
          </div>
          <div className={styles.header__line}></div>
          <nav className={styles.header__nav}>
-            <ul className={styles.header__list}>
-               {nav.map((el, index) => {
-                  return(
-                  <li className={`${styles.header__item} ${pathname === el.href ? styles.header__itemActive : ''}`} key={index}>
-                     <Link style={{color: 'inherit', height: '96px', display: 'flex', alignItems: 'center'}} href={el.href}>
-                        <span className={styles.header__num}>{el.num}</span>
-                        <span className={styles.header__title}>{el.title}</span>
-                     </Link>
-                  </li>)
-               })}
-            </ul>
+            <HeaderNav nav={nav}/>
+            <BurgerMenu nav={nav} />
          </nav>
       </div>
    </header>

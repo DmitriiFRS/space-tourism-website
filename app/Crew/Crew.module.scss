@@ -1,0 +1,232 @@
+.crew {
+   margin: 212px 0 0 0;
+   color: #FFF;
+   @media(max-width: 470px) {
+      margin: 100px 0 0 0;
+   }
+   &__imgBody {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+   }
+   &_container {
+      position: relative;
+      padding: 0 0 0 110px;
+      min-height: calc(100vh - 212px);
+      @media(max-width: 1200px) {
+         padding: 0 0 0 20px;
+      }
+      @media(max-width: 885px) {
+         min-height: calc(100vh + 160px);
+      }
+      @media(max-width: 470px) {
+         min-height: auto;
+         padding: 0 10px;
+      }
+   }
+   &__titleBody {
+      font-size: 28px;
+      text-transform: uppercase;
+      display: flex;
+      animation-name: titleBody;
+      animation-duration: 1.5s;
+      @media(max-width: 1030px) {
+         font-size: 20px;
+         letter-spacing: 3.375px;
+      }
+      @media(max-width: 885px) {
+         animation: none
+      }
+      @media(max-width: 700px) {
+         justify-content: center;
+      }
+   }
+   @keyframes titleBody {
+      0% {
+         transform: translateX(-100%);
+      }
+      50% {
+         transform: translateX(-100%);
+      }
+      100% {
+         transform: translateX(0%);
+      }
+   }
+   &__num {
+      font-weight: 700;
+      letter-spacing: 4.725px;
+      opacity: 0.25;
+      color: #fff;
+   }
+   &__title {
+      margin: 0 0 0 28px;
+      color: #fff;
+      letter-spacing: 4.725px;
+   }
+}
+.crewlist {
+   @media(max-width: 885px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__description {
+      margin: 154px 0 0 0;
+      max-width: 488px;
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+      animation-name: description;
+      animation-duration: 1.5s;
+      @media(max-width: 885px) {
+         text-align: center;
+         margin: 60px 0 0 0;
+         animation-duration: 0.8s;
+      }
+      @media(max-width: 470px) {
+         margin: 545px 0 0 0;
+      }
+   }
+   &__headerTitle {
+      font-family: Bellefair;
+      font-size: 32px;
+      text-transform: uppercase;
+      opacity: 0.5;
+      @media(max-width: 1030px) {
+         font-size: 24px;
+      }
+   }
+   &__name {
+      font-family: Bellefair;
+      font-size: 56px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      margin: 15px 0 0 0;
+      @media(max-width: 1030px) {
+         font-size: 40px;
+      }
+      @media(max-width: 470px) {
+         white-space: initial;
+      }
+   }
+   &__subtitle {
+      margin: 27px 0 0 0;
+      color: #D0D6F9;
+      font-family: Barlow;
+      font-size: 18px;
+      line-height: 177%;
+      max-width: 444px;
+      @media(max-width: 1030px) {
+         font-size: 16px;
+      }
+   }
+   &__img {
+      position: fixed;
+      right: 15%;
+      bottom: 0%;
+      transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+      animation-name: astroImage;
+      animation-duration: 1.5s;
+      @media(max-width: 1500px) {
+         right: 10%;
+      }
+      @media(max-width: 1320px) {
+         right: 5%;
+      }
+      @media(max-width: 1150px) {
+         right: 0;
+         width: 450px !important;
+         height: 570px !important;
+      }
+      @media(max-width: 885px) {
+         position: absolute;
+         bottom: 0%;
+         right: auto;
+         margin: 0 auto;
+         animation: none;
+      }
+      @media(max-width: 470px) {
+         width: 300px !important;
+         height: 370px !important;
+         top: 80px;
+      }
+   }
+   &__pagination {
+      position: absolute;
+      left: 100px;
+      bottom: 84px;
+      display: flex;
+      gap: 4px;
+      z-index: 40;
+      animation-name: pagination;
+      animation-duration: 1.5s;
+      @media(max-width: 885px) {
+         position: relative;
+         left: auto;
+         bottom: auto;
+         margin: 40px 0 0 0;
+         animation: none;
+      }
+      @media(max-width: 470px) {
+         position: absolute;
+         top: 450px;
+      }
+   }
+   &__paginationContainer {
+      padding: 10px;
+      cursor: pointer;
+      &:hover {
+         .crewlist__paginationDot:not(.crewlist__activeDot) {
+            background: #FFF;
+            opacity: 0.5;
+         }
+      }
+   }
+   &__paginationDot {
+      width: 15px;
+      height: 15px;
+      background: #FFF;
+      border-radius: 50%;
+      opacity: 0.17;
+   }
+   &__activeDot {
+      opacity: 1;
+   }
+}
+@keyframes description {
+   0% {
+      transform: translateX(-230%);
+   }
+   50% {
+      transform: translateX(-230%);
+   }
+   100% {
+      transform: translateX(0%);
+   }
+}
+@keyframes astroImage {
+   0% {
+      bottom: -100%;
+   }
+   50% {
+      bottom: -100%;
+   }
+   100% {
+      bottom: 0%;
+   }
+}
+@keyframes pagination {
+   0% {
+      left: -40%;
+   }
+   50% {
+      left: -40%;
+   }
+   100% {
+      left: 100px;
+   }
+}

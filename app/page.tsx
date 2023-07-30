@@ -5,7 +5,10 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.main__imgBody}>
-        <Image src="/background-home-desktop.jpg"style={{objectFit: "cover"}} quality={100} fill={true} priority={true} alt="" />
+        <Image src="/background-home-desktop.jpg"style={{objectFit: "cover"}} quality={100} fill={true} priority={true} alt="background" />
+      </div>
+      <div className={styles.main__imgBodyMobile}>
+        <Image src="/background-home-mobile.jpg" quality={100} fill={true} priority={true} alt="background" />
       </div>
       <div className={`${styles.main_container} container`}>
         <div className={styles.main__titleBody}>
