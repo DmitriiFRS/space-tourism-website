@@ -5,7 +5,7 @@ function PlanetsLayout ({children}: {children: ReactNode}) {
    return (
       <div className={styles.destination}>
          <div className={styles.destination__imgBody}>
-        <Image src="/background-destination-desktop.jpg"style={{objectFit: "cover"}} quality={100} fill={true} priority={true} alt="" />
+        <Image src="/background-destination-desktop.jpg"style={{objectFit: "cover"}} quality={100} fill={true} loading='eager' alt="" />
          </div>
          {children}
       </div>

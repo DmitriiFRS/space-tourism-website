@@ -8,7 +8,7 @@ export default function Home() {
         <Image src="/background-home-desktop.jpg"style={{objectFit: "cover"}} quality={100} fill={true} priority={true} alt="background" />
       </div>
       <div className={styles.main__imgBodyMobile}>
-        <Image src="/background-home-mobile.jpg" quality={100} fill={true} priority={true} loading='eager' alt="background" />
+        <Image src="/background-home-mobile.jpg" quality={100} fill={true} loading='eager' alt="background" />
       </div>
       <div className={`${styles.main_container} container`}>
         <div className={styles.main__titleBody}>

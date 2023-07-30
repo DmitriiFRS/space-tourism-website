@@ -57,10 +57,10 @@ function SpaceLaunchList() {
          </div>
       </div>
       <div className={styles.terminology__img}>
-         <Image style={{opacity: opacity, transition: '0.3s ease-in-out', objectFit: 'cover', objectPosition: currentspaceLaunch.objectPosition}} fill={true} src={currentspaceLaunch.img}  alt=''/>
+         <Image style={{opacity: opacity, transition: '0.3s ease-in-out', objectFit: 'cover', objectPosition: currentspaceLaunch.objectPosition}} fill={true} src={currentspaceLaunch.img} loading='eager'  alt=''/>
       </div>
       <div className={styles.terminology__imgMobile}>
-         <Image style={{opacity: opacity, transition: '0.3s ease-in-out'}} fill={true} src={currentspaceLaunch.img}  alt=''/>
+         <Image style={{opacity: opacity, transition: '0.3s ease-in-out'}} fill={true} src={currentspaceLaunch.img} loading='eager'  alt=''/>
       </div>
    </div>
    )

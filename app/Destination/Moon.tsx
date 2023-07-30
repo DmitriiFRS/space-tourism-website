@@ -7,7 +7,7 @@ function Moon({planetRender, transition}: {planetRender: planetsType, transition
    return (
    <div className={styles.moon} style={{transform: `translateX(${transition.translateX})`, transition: transition.transition, opacity: transition.opacity}}>
       <div className={styles.moon__imgBody}>
-         <Image src={planetRender.image} alt='MoonPicture' fill={true} />
+         <Image src={planetRender.image} alt='MoonPicture' fill={true} loading='eager' />
       </div>
       <div className={styles.moon__description}>
          <h2 className={styles.moon__title}>{planetRender.name}</h2>

@@ -68,7 +68,7 @@ function CrewList() {
          })}
       </div>
       <div className={styles.crewlist__img} style={{width: `${astronaut.imgWidth}px`, height: `${astronaut.imgHeight}px`, opacity: opacity}}>
-         <Image src={astronaut.img} quality={100} fill={true} alt='Douglas-hurley' />
+         <Image src={astronaut.img} quality={100} fill={true} loading='eager' alt='Douglas-hurley' />
       </div>
    </div>
    )
